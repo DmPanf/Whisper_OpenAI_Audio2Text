@@ -9,7 +9,7 @@ convert_seconds_to_time() {
     printf "%02d:%02d:%02d\n" $hours $minutes $seconds
 }
 
-# Change directory to the one containing the video files
+# Change directory to the one containing the video files 
 cd ./2sound
 
 # Loop through all MP4 files in the current directory
