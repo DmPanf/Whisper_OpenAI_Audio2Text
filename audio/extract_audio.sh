@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to convert seconds to HH:MM:SS format
+#   Function to convert seconds to HH:MM:SS format
 convert_seconds_to_time() {
     local total_seconds=$1
     local hours=$(echo "$total_seconds/3600" | bc)
@@ -9,10 +9,10 @@ convert_seconds_to_time() {
     printf "%02d:%02d:%02d\n" $hours $minutes $seconds
 }
 
-# Change directory to the one containing the video files 
+#   Change directory to the one containing the video files 
 cd ./2sound
 
-# Loop through all MP4 files in the current directory
+#   Loop through all MP4 files in the current directory
 for file in *.mp4; do
     # Extract the date and week number from the file name
     date=$(echo $file | grep -oP '\d{4}-\d{2}-\d{2}')
