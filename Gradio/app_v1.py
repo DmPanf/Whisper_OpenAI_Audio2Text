@@ -3,9 +3,7 @@ import torch
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 import gradio as gr
 
-home = "C:\\Users\\bunta\\Documents\\ARCHIVE\\Python.Projects\\Whisper"
-# os.getcwd() 
-# C:\Users\bunta\AppData\Local\Temp\gradio\a8d6d311c86e1dd7713ade12d71b1ce95e57552e\На острове свободы.txt
+home = "C:\\Users\\${USER}\\Documents\\${PROJECT}\\Python.Projects\\Whisper"
 
 # Определите устройство (GPU или CPU)
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
@@ -52,8 +50,7 @@ interface = gr.Interface(
     inputs=gr.Audio(type="filepath"),
     outputs=gr.Textbox(),
     title="Speech to Text Transcription",
-    description="Upload an audio file and get the transcription." #,
-    #max_content_length=100 * 1024 * 1024  # Увеличьте размер контента до 100MB
+    description="Upload an audio file and get the transcription."
 )
 
 # Запустите приложение
