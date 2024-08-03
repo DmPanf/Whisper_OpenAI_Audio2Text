@@ -1,11 +1,13 @@
-# main1.py
+# python main_v01.py
 
 import os
 import whisper
 import time
 
-audio_path = '/content/drive/MyDrive/DATA/Audio'
-text_path = '/content/drive/MyDrive/Whisper/Ogul.English'
+# Определение базового пути
+BASE_PATH = os.getcwd()
+audio_path = os.path.join(BASE_PATH,  '/DATA/Audio')
+text_path = os.path.join(BASE_PATH, 'Whisper/Ogul.English')
 model_name = 'large'
 
 # Загрузка модели Whisper
